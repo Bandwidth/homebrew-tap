@@ -1,0 +1,20 @@
+name: Prefix PR Title
+
+on:
+  pull_request:
+    types: [opened]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  prefix:
+    if: startsWith(github.head_ref, 'goreleaser/')
+    runs-on: macos-latest
+    steps:
+      - name: Add ticket prefix to PR title
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          CURRENT_TITLE=$(gh pr view ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --json title -q .title)
+          gh pr edit ${{ github.event.pull_request.number }} --repo ${{ github.repository }} --title "SWI-10615 $CURRENT_TITLE"
