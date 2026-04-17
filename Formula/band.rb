@@ -5,7 +5,6 @@
 class Band < Formula
   desc "Bandwidth CLI — manage voice, messaging, numbers, and more from the command line"
   homepage "https://github.com/Bandwidth/cli"
-  version "0.0.1-beta"
   license "MIT"
 
   on_macos do
