@@ -5,20 +5,21 @@
 class Band < Formula
   desc "Bandwidth CLI — manage voice, messaging, numbers, and more from the command line"
   homepage "https://github.com/Bandwidth/cli"
+  version "0.1.0-beta"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Bandwidth/cli/releases/download/v0.0.1-beta/band_0.0.1-beta_darwin_amd64.tar.gz"
-      sha256 "daa496b8ed9c1ef4431306de8dec82deebe28d6f1249f90671d673ee32371d06"
+      url "https://github.com/Bandwidth/cli/releases/download/v0.1.0-beta/band_0.1.0-beta_darwin_amd64.tar.gz"
+      sha256 "f6e5650629ac1cdcba87978a466b81a30589ae6de6b6e140d36900b6bfbcc6a7"
 
       define_method(:install) do
         bin.install "band"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Bandwidth/cli/releases/download/v0.0.1-beta/band_0.0.1-beta_darwin_arm64.tar.gz"
-      sha256 "727e036064ea6e8633f87d9081d814221f9f9e4836fa75ea9da6858e147fd57e"
+      url "https://github.com/Bandwidth/cli/releases/download/v0.1.0-beta/band_0.1.0-beta_darwin_arm64.tar.gz"
+      sha256 "91c0be841b511dbd584ef259e3413716b49e0c5d495de0b6c6a02eb565ce16c4"
 
       define_method(:install) do
         bin.install "band"
@@ -28,15 +29,15 @@ class Band < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Bandwidth/cli/releases/download/v0.0.1-beta/band_0.0.1-beta_linux_amd64.tar.gz"
-      sha256 "4065efca57f284db3d7b53f79542b06a3a38e7c980723c85d626a48d5681401a"
+      url "https://github.com/Bandwidth/cli/releases/download/v0.1.0-beta/band_0.1.0-beta_linux_amd64.tar.gz"
+      sha256 "7f5bbf512582e4f42a5934e32ba89815dc1230110852096c4f350e94151596e5"
       define_method(:install) do
         bin.install "band"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Bandwidth/cli/releases/download/v0.0.1-beta/band_0.0.1-beta_linux_arm64.tar.gz"
-      sha256 "9135e75a850c4f4e2131265fb7d7e4b0b679924e8c95d491f1542e03378db674"
+      url "https://github.com/Bandwidth/cli/releases/download/v0.1.0-beta/band_0.1.0-beta_linux_arm64.tar.gz"
+      sha256 "123f0dcf7c2dcb1df928a90dc6f651e2f57b7b0637b2e38ac3965e074b028be0"
       define_method(:install) do
         bin.install "band"
       end
