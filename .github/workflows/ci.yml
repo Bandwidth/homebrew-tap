@@ -18,4 +18,4 @@ jobs:
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/bandwidth/homebrew-tap"
 
       - name: Audit formula
-        run: brew audit band
+        run: brew audit --strict band
