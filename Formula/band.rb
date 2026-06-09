@@ -1,8 +1,8 @@
 class Band < Formula
   desc "Manage voice, messaging, numbers, and more from the command-line"
   homepage "https://github.com/Bandwidth/cli"
-  url "https://github.com/Bandwidth/cli/archive/refs/tags/v0.1.1-beta.tar.gz"
-  sha256 "c1603378dc8c61ac1edfdfb4ac64a4b8b16964a3a4a8212ed89703e127718fef"
+  url "https://github.com/Bandwidth/cli/archive/refs/tags/v0.2.0-beta.tar.gz"
+  sha256 "f71dcb337fb7546c19d95654356767b6ca5a920a7dba9ac2787231d376ef0103"
   license "MIT"
 
   depends_on "go" => :build
