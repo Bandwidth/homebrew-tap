@@ -17,5 +17,8 @@ jobs:
           mkdir -p "$(brew --repository)/Library/Taps/bandwidth"
           ln -s "$GITHUB_WORKSPACE" "$(brew --repository)/Library/Taps/bandwidth/homebrew-tap"
 
+      - name: Trust this tap
+        run: brew trust bandwidth/tap
+
       - name: Audit formula
         run: brew audit --strict band
