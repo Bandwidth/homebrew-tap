@@ -6,6 +6,7 @@ metadata:
   description: Tap for our Homebrew libraries
   annotations:
     github.com/project-slug: Bandwidth/homebrew-tap
+    bandwidth.com/languages: Ruby
   organization: BW
   costCenter: 
   platformType: 
